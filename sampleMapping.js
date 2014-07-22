@@ -56,19 +56,6 @@ function generateNotes(index, presetInstrument){
 		}
 	}
 
-	// /////////for bass guitar////////////////////	
-	// else if(presetInstrument.name == "bass"){
-	// 	for(var i = 27; i <= presetInstrument.notes + 27; i++){
-	// 		target.append(instrument);
-	// 		console.log(i);
-	// 		var instrumentPath = String(presetInstrument.path + "/note-" + i + ".ogg");
-	// 		var newInstrument = target.find("audio:last-child");
-	// 		newInstrument.attr("src", instrumentPath);
-	// 		newInstrument.attr("id", i);
-	// 		octave = 1;
-	// 	}
-	// }
-
 	else{
 		for(var i = 1; i <= presetInstrument.notes; i++){
 			target.append(instrument);
@@ -78,7 +65,7 @@ function generateNotes(index, presetInstrument){
 			newInstrument.attr("src", instrumentPath);
 			newInstrument.attr("id", i);
 		}
-		
+
 		var notes = [];
 		var noteWrap = $('.audioBin' + index + ' li');
 		notes = noteWrap.find('audio');
